@@ -1,0 +1,211 @@
+//FRANCE COMBAT v0.6.57//
+2019 Double Bud Games
+
+
+######################
+VERSIONS LIST
+######################
+25/Oct/2019
+v0.0.2 
+	-Animation Speed
+
+26/Oct/2019
+v0.0.5 
+	-flip sprite sens 
+	-sounds integration
+	-bot v1
+	-direction & jump
+
+27/Oct/2019
+v0.1.0 
+	-layer priority
+	-possible move & jump
+	-smashpoint integration
+
+28/Oct/2019
+v0.1.9 
+	-2 players ok
+	-operational basic game
+	-ok Fight images & sounds
+	-code optimisation
+	-adjust symmetry
+	-ko mode integration
+	-review moves
+	-review guard
+
+29/Oct/2019
+v0.3.1 
+	-integration of energy bars
+	-scale & folder
+	-adjust moves & guard
+	-ko sound integration
+	-bot v2.1
+
+30/Oct/2019
+v0.3.2 
+	-bot v2.2
+
+31/Oct/2019
+v0.3.41 
+	-review combo system
+	-gameSpeed integration
+
+01/Nov/2019
+v0.3.45 
+	-finish combo system
+	-guard v2.2
+
+02/Nov/2019
+v0.3.47 
+	-2 players combo integration
+	-combo v3.0 
+	-comboMode ok
+
+03/Nov/2019
+v0.3.56 
+	-Big Debug
+	-Init button
+	-debug start pos players
+	-fixed size
+	-groggy state
+
+04/Nov/2019
+v0.3.67 
+	-range media to folders
+	-jump fixed & punched move
+	-new jump physics
+	-3 slices combo
+	-combo keys fixed
+	-autobot jump fixed
+	-combo fail sound
+	-new punched in the air
+
+05/Nov/2019
+v0.3.74 
+	-2 new moves & contre
+	-contre v1.4
+
+06/Nov/2019
+v0.5.0
+2822 lines.
+	-detector function
+	-reset combo jauge fonction
+	-Code optimisation
+	-1 ressource page
+	-combo keyboard end fixed
+	-1 combo for 2
+	-contre v1.5
+	-rounds ok
+	-ko v2.2
+	-ok for google Chrome!!!
+	-one list mode v1.0
+
+07/Nov/2019
+v0.5.24
+2567 lines.
+	-code optimisation
+	-player pos
+	-1 detector
+	-1 move v1.0
+	-1 move v1.1
+	-Pad
+	-contre
+	-debug
+
+08/Nov/2019
+v.0.5.24 (OK FIGHT)
+2324 lines.
+	-debug energy view
+	-debug hit
+	-debug jump state
+	-debug ko
+	-debug combo with ko
+	-one page condition
+	-one page detection
+	-one page hits
+v0.6.3 (Clean Up)
+2100 lines.
+	-character list
+	-debug punch to the right
+	-clean up
+v0.6.33 (Beta v1)
+2049 lines.
+	-one player page
+	-debug contre
+
+09/Nov/2019 
+v0.6.39
+2044 lines. 
+	-vectorForce integration
+	-move forward ok!!
+	-energy small png
+	-combomode compress
+	-flash hits ok
+	-one sens detector
+
+10/Nov/2019 
+v0.6.40 
+2042 lines.
+	-contre v2 (only if backGuard)
+
+11/Nov/2019 (serious version)
+v0.6.51
+2047 lines.
+	-Combo Delay
+	-Hits iteration
+	-debug move
+	-adjust force
+	-reboot combo level at round start
+	-display the red KO
+	-fixed problem between moves & direction
+	-120>0 energyB display fixed
+	-backward guard fixed
+	-change cisorKick sound
+	-integration keyboard for Safari
+	-delete function initCounter
+v0.6.52
+	-loop playing background music
+
+12/Nov/2019
+v0.6.57
+	-Low Punched time
+	-Damages review
+	-Hits Iteration
+	-Contre iteration
+	-Kick then down fixed
+	-move backward more slowly
+
+######################
+FUTURES UPDATES
+######################
+//BUG
+#affichage energy et jauge energy (safari)
+#encore la marche avant
+
+//AMELIORATIONS
+#1 iteration for all hits!
+#vape++ quand enchainements
+#jauges rounds
+#sons player 1/2 win
+#haddoken!!!!
+#pied et poings différents pour double ko?
+#supprimer jauge à zero quand frappé?
+#jauge combo qui monte un peu après être frappée?
+#pied et poing fury?
+#zoom?
+////////////////////
+
+//INTEGRATION
+#Ajout SuperCombo
+#menu start
+#menu select & play
+#menu options et modes du jeu
+#creer controleur des volumes
+#menu options manettes
+#menu detect gamepads auto
+#fonction return menu
+////////////////////
+
+//OTHER
+#bot V3 (detection y + sequences et reactions + prob combo)
+////////////////////
