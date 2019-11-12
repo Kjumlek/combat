@@ -158,10 +158,7 @@ function jumpState(x){
 
 //DEPLACEMENTS
 function move(x){
-    if (x.uppercutIteration 
-        && x.kickIteration
-        && x.cisorKickIteration
-        && !x.contreIteration
+    if (x.interationHit
         && x.keyCounterK == 0
         && x.keyCounterP == 0
         ){
@@ -232,7 +229,7 @@ function punch1(x){
         && x.doublePunch == false 
         && x.keyCounterP == 0
         && x.superPunch2 == false
-        && x.uppercutIteration
+        && x.interationHit
         && !x.contreIteration
         ) {return true;}
     else{return false};
@@ -325,7 +322,7 @@ function uppercutState(x){
     x.keyCounterP++;
     x.firstGround = true;
     x.keyCounterM = 0;
-    x.uppercutIteration = false;
+    x.interationHit = false;
 }
 //kick et amorce super kick
 function kick1(x){
@@ -349,7 +346,7 @@ function kick(x){
     swing4.play();
     x.vectorForce= 1.7;
     x.recuperation = 0;
-    x.kickIteration = false;
+    x.interationHit = false;
 }
 function kickState(x){
     x.padDirection = false;
@@ -399,7 +396,7 @@ function lowKickState(x){
 function skick1(x){
     if(x.superKick2 == true
         && x.kickRepeat == true
-        && x.kickIteration) {return true;}
+        && x.interationHit) {return true;}
     else{return false};
 }
 function cisorKick(x){
@@ -411,7 +408,7 @@ function cisorKick(x){
     swing3.play();
     x.vectorForce= 3.3;
     x.recuperation = 0;
-    x.cisorKickIteration = false;
+    x.interationHit = false;
 }
 function cisorKickState(x){
     x.padDirection = false;
@@ -437,7 +434,7 @@ function contre(x){
     x.vape = true;
     x.firstGround = true;
     x.keyCounterM = 0;
-    contreIteration = true;
+    x.contreIteration = true;
     x.padDirection = false;
 
 }
@@ -466,7 +463,7 @@ function airKickState(x){
     x.kickRepeat = false;
     x.keyCounterK++;
     x.doubleAirKick = true;
-    x.airKickIteration = false;
+    x.interationHit = false;
     x.firstGround = true;
     x.keyCounterM = 0;
     //appel combo
@@ -477,7 +474,7 @@ function airKickState(x){
 //double air kick
 function akick2(x){
     if(x.doubleAirKick == true
-        && x.airKickIteration == true) {return true;}
+        && x.interationHit == true) {return true;}
     else{return false};
 }
 function airKick2(){

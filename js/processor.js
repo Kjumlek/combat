@@ -174,11 +174,7 @@ function playerCondition(char ,charb, pos){
     if (char.step >= char.smashPoint){char.smashOk = true;}
     // Iteration du air Kick
     if (char.step > 15){char.contreIteration = false;}
-    if (char.step > 5){
-        char.airKickIteration = true;
-        char.cisorKickIteration = true;
-        char.kickIteration = true;}
-    if (char.step > 4){char.uppercutIteration = true;}
+    if (char.step >= char.fightStyleLenght){char.interationHit = true;}
     //ko
     if (char.energy <= 0){
         ko(char, charb);

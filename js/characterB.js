@@ -53,9 +53,8 @@ bot = {
     //bloque les punchs du meme cote
     punchrepeat : [false,false],
     //Attend la fin des kicks
-    kickRepeat : true, airKickIteration : false, contreIteration : false,
-    uppercutIteration : false, cisorKickIteration : false,
-    kickIteration : false,
+    contreIteration : false,
+    interationHit: false,
     keyCounter : 0, keyCounterG : 0, keyCounterK : 0, keyCounterP : 0,
     keyCounterM : 0,
 
