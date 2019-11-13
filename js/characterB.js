@@ -125,7 +125,7 @@ function botstand(){
 //ENERGY
     energyProcessor(bot);
 //CONDITIONS
-    playerCondition(bot, fighter, botPos);
+    playerCondition(bot, fighter);
 }
 
 var BPadController, 
@@ -167,7 +167,7 @@ Bloop = function() {
     //contre//
     contreProcessorRight(BPadController, bot, fighter, fighterPos);
     /////////////////////////////////////////////////
-    punchRightProcessor(bot, fighter, botPos, fighterPos);
+    punchRightProcessor(bot, fighter, fighterPos);
     /////////////////////////////////////////////////
     //detection des coups donnés à gauche
     detectorLeft(fighter, fighterPos, botPos);
@@ -175,7 +175,7 @@ Bloop = function() {
     //contre//
     contreProcessorLeft(BPadController, bot, fighter, fighterPos);
     /////////////////////////////////////////////////
-    punchLeftProcessor(bot, fighter, botPos, fighterPos);
+    punchLeftProcessor(bot, fighter, fighterPos);
     /////////////////////////////////////////////////
     //deplacement 
     moveProcessor(bot, botPos, fighterPos, BPadController);

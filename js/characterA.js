@@ -125,7 +125,7 @@ function stand(){
 //ENERGY
     energyProcessor(fighter);
 //CONDITIONS
-    playerCondition(fighter, bot, fighterPos);
+    playerCondition(fighter, bot);
 }
 
 var padController, 
@@ -167,7 +167,7 @@ loop = function() {
     //contre//
     contreProcessorRight(padController, fighter, bot, botPos);
     /////////////////////////////////////////////////
-    punchRightProcessor(fighter, bot, fighterPos, botPos);
+    punchRightProcessor(fighter, bot, botPos);
     /////////////////////////////////////////////////
     //detection des coups donnés à gauche
     detectorLeft(bot, botPos, fighterPos);
@@ -175,7 +175,7 @@ loop = function() {
     //contre//
     contreProcessorLeft(padController, fighter, bot, botPos);
     /////////////////////////////////////////////////
-    punchLeftProcessor(fighter, bot, fighterPos, botPos);
+    punchLeftProcessor(fighter, bot, botPos);
     /////////////////////////////////////////////////
     //deplacement 
     moveProcessor(fighter, fighterPos, botPos, padController);

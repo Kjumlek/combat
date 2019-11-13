@@ -271,6 +271,7 @@ function animate(){
         trozik.play();
         trozik.currentTime = 11.996;
     }
+    
     draw();
     stepConvert();
     backAnime();

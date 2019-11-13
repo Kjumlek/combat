@@ -5,7 +5,7 @@ function keyboardDown(x, xPos, kD, kU, kL, kR, kP, kK, event){
         gardeBasse(x);
         gardeBasseState(x);}
     //jump
-    else if (event.keyCode == kU && up1(x, xPos)){
+    else if (event.keyCode == kU && up1(x)){
         jumpState(x);}
     //direction gauche
     else if (event.keyCode == kL){
@@ -136,8 +136,8 @@ function gardeBasseState(x){
 }
 
 //SAUT
-function up1(x, pos){
-    if(x.keyCounter == 0 && pos.jumping == false) {return true;}
+function up1(x){
+    if(x.keyCounter == 0 && x.jumpState == false) {return true;}
     else{return false};
 }
 function jump(x){
@@ -474,7 +474,7 @@ function airKickState(x){
 //double air kick
 function akick2(x){
     if(x.doubleAirKick == true
-        && x.interationHit == true) {return true;}
+        && x.step >= 5) {return true;}
     else{return false};
 }
 function airKick2(){
