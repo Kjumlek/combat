@@ -1,4 +1,4 @@
-//FRANCE COMBAT v0.6.57//
+//FRANCE COMBAT v0.6.61//
 2019 Double Bud Games
 
 
@@ -174,6 +174,14 @@ v0.6.57
 	-Contre iteration
 	-Kick then down fixed
 	-move backward more slowly
+v0.6.60
+	-One iteration value
+	-Hits Iterations fixed
+	-Animation iteration Fixed
+
+13/Nov/2019
+v0.6.61
+	-Double air kick fixed
 
 ######################
 FUTURES UPDATES
@@ -183,16 +191,13 @@ FUTURES UPDATES
 #encore la marche avant
 
 //AMELIORATIONS
-#1 iteration for all hits!
+#1 jumpState variable
 #vape++ quand enchainements
 #jauges rounds
 #sons player 1/2 win
 #haddoken!!!!
-#pied et poings différents pour double ko?
-#supprimer jauge à zero quand frappé?
-#jauge combo qui monte un peu après être frappée?
-#pied et poing fury?
 #zoom?
+#pied et poing fury pour d’autres characters
 ////////////////////
 
 //INTEGRATION
