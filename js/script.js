@@ -156,20 +156,20 @@ document.addEventListener("keydown",function(event){
         if (event.keyCode == 38){comboKey = 14;}
         if (event.keyCode == 37){comboKey = 7;}
         if (event.keyCode == 39){comboKey = 0;}
-        if (event.keyCode == 83){comboKey = 28;}
-        if (event.keyCode == 68){comboKey = 35;}
+        if (event.keyCode == 76){comboKey = 28;}
+        if (event.keyCode == 77){comboKey = 35;}
     }
 });
 ///////////////////////////////////////////
 //COMBOMODE ENEMI KEYBOARD//
 document.addEventListener("keydown",function(event){
     if (!fighter.combo && combodelay){
-        if (event.keyCode == 75){comboKey = 21;}
-        if (event.keyCode == 73){comboKey = 14;}
-        if (event.keyCode == 74){comboKey = 7;}
-        if (event.keyCode == 76){comboKey = 0;}
-        if (event.keyCode == 84){comboKey = 28;}
-        if (event.keyCode == 89){comboKey = 35;}
+        if (event.keyCode == 83){comboKey = 21;}
+        if (event.keyCode == 90){comboKey = 14;}
+        if (event.keyCode == 81){comboKey = 7;}
+        if (event.keyCode == 68){comboKey = 0;}
+        if (event.keyCode == 49){comboKey = 28;}
+        if (event.keyCode == 50){comboKey = 35;}
     }
 });
 ///////////////////////////////////////////

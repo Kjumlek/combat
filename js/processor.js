@@ -30,6 +30,21 @@ function detectorLeft(char, pos, posb){
 //DEPLACEMENTS
 /////////////////////////////////////////////////
 function moveProcessor(char, pos, posb, pad){
+    //EJECTION EN L'AIR
+    if(char.punchFly && (!char.detectL && !char.detectR)){
+            char.punchFly = false;
+    }           
+    else if (char.punchFly && (char.detectL || char.detectR))  {
+        posb.pY_velocity -= 9 * gamespeed;
+        posb.jumping = false;
+        char.punchFly = false;
+        if (char.reverseAnim == 1){
+            posb.pX_velocity += 4 * gamespeed;
+        }
+        else if (char.reverseAnim == -1){
+            posb.pX_velocity -= 4 * gamespeed;
+        }
+    }
 
     //saut possible
     if (pad.up && pos.jumping == false 
@@ -166,15 +181,19 @@ function contreProcessorLeft(pad, char, charb, posb){
 ///////////////////////////////////////////
 //CONDITIONS
 ///////////////////////////////////////////
+function playerCondition(char ,charb, pos){
+///////////////////////////////////////////
+//ANIMATIONS
+    // Iteration
+    if (char.step > 15){char.contreIteration = false;}
+    if (char.step >= char.fightStyleLenght){
+        char.interationHit = true;}
+///////////////////////////////////////////
 
 ///////////////////////////////////////////
 //SMASH & KO
-function playerCondition(char ,charb, pos){
     // Moment du coup
     if (char.step >= char.smashPoint){char.smashOk = true;}
-    // Iteration du air Kick
-    if (char.step > 15){char.contreIteration = false;}
-    if (char.step >= char.fightStyleLenght){char.interationHit = true;}
     //ko
     if (char.energy <= 0){
         ko(char, charb);
@@ -188,7 +207,7 @@ function playerCondition(char ,charb, pos){
         if (char.step >= char.fightStyleLenght){
             char.step = char.fightStyleLenght;}
     }
-    else if (char.keyCounterM == 1 && !char.jumpState){
+    else if (char.keyCounterM == 1 && !char.jumpState && !char.arrGarde){
         if (char.step >= char.fightStyleLenght){
             char.step -= char.fightStyleLenght;}
         }
@@ -208,14 +227,10 @@ function playerCondition(char ,charb, pos){
 ///////////////////////////////////////////
 //AUTRES CONDITIONS
     // Anim saut et frappé en l'air
-    else if (pos.jumping == true && char.jumpState == true){
-        if(!char.vape){
+    else if (pos.jumping == true && char.jumpState == true
+        && !char.vape){
             jump(char);
-            if (char.step >= 7){
-                char.step-=4;}
-        }
-        else if(char.vape){
-            punched(char);}
+            if (char.step >= 7){char.step-=4;}
     }
     // Au sol
     else if (char.jumpState == false){

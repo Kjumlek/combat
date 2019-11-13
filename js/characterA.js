@@ -68,7 +68,7 @@ fighter = {
     //super kick
     superKick1 : false, superKick2 : false,
     //punch eject
-    punchEject : false,
+    punchEject : false, punchFly : false,
 
     //DETECTION
     detectR : false, detectL : false,
@@ -97,13 +97,13 @@ fighterPos = {jumping:true,
 //detection appuis
 document.addEventListener("keydown",function(event){
     if(fighter.energy >= 1 && okFight && !bot.combo && !fighter.contreIteration){
-        keyboardDown(fighter, fighterPos, 40, 38, 37, 39, 83, 68, event);
+        keyboardDown(fighter, fighterPos, 40, 38, 37, 39, 76, 77, event);
     }
 });
 keyLatch = {
     keyListener:function(e) {
         var key_state = (e.type == "keyup")?true:false;
-        keyboardUp(fighter, e, 37, 38, 39, 40, 83, 68);
+        keyboardUp(fighter, e, 37, 38, 39, 40, 76, 77);
     }
 }
 window.addEventListener("keyup", keyLatch.keyListener);

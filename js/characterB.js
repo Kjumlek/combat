@@ -68,7 +68,7 @@ bot = {
     //super kick
     superKick1 : false, superKick2 : false,
     //punch eject
-    punchEject : false,
+    punchEject : false, punchFly : false,
 
     //DETECTION
     detectR : false, detectL : false,
@@ -97,13 +97,13 @@ botPos = {jumping:true,
 //detection appuis
 document.addEventListener("keydown",function(event){
     if (bot.energy >= 1 && okFight && !fighter.combo && !bot.contreIteration){
-        keyboardDown(bot, botPos, 75, 73, 74, 76, 84, 89, event);
+        keyboardDown(bot, botPos, 83, 90, 81, 68, 49, 50, event);
     }
 });
 bkeyLatch = {
     keyListener:function(event) {
         var key_state = (event.type == "keyup")?true:false;
-        keyboardUp(bot, event, 74, 73, 76, 75, 84, 89);
+        keyboardUp(bot, event, 81, 90, 68, 83, 49, 50);
     }
 }
 window.addEventListener("keyup", bkeyLatch.keyListener);
@@ -140,16 +140,16 @@ BPadController = {
             ){
         var Bkey_state = (event.type == "keydown")?true:false;
         switch(event.keyCode) {
-            case 74:// left key
+            case 81:// left key
             BPadController.left = Bkey_state;
             bot.downState = false;
             break;
-            case 73:// up key
+            case 90:// up key
             if (bot.keyCounter ==0 && bot.energy > 0){
             BPadController.up = Bkey_state;
             }
             break;
-            case 76:// right key
+            case 68:// right key
             BPadController.right = Bkey_state;
             bot.downState = false;
             break;}

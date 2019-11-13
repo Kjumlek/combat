@@ -11,13 +11,13 @@ function keyboardDown(x, xPos, kD, kU, kL, kR, kP, kK, event){
     else if (event.keyCode == kL){
         move(x);
         moveStateL(x);
-        //x.keyCounterM = 1;
+        x.keyCounterM = 1;
     }
     //direction droite
     else if (event.keyCode == kR){
         move(x);
         moveStateR(x);
-        //x.keyCounterM = 1;
+        x.keyCounterM = 1;
     }
     //punch et amorce double punch
     else if (event.keyCode == kP && punch1(x)){
@@ -323,6 +323,7 @@ function uppercutState(x){
     x.firstGround = true;
     x.keyCounterM = 0;
     x.interationHit = false;
+    x.punchFly = true;
 }
 //kick et amorce super kick
 function kick1(x){
@@ -419,6 +420,7 @@ function cisorKickState(x){
     x.keyCounterK++;
     x.firstGround = true;
     x.keyCounterM = 0;
+    x.punchFly = true;
 }
 //contre
 function contre(x){
@@ -521,7 +523,7 @@ function airPunchState(x){
 //frappé
 pSV=0;
 function punched(x){
-    punchedSpeed = 0.4
+    punchedSpeed = 1;
     x.fightStyle = 106;
     x.fightStyleLenght = 5;
     x.animSpeed = 0.5;
@@ -539,6 +541,27 @@ function punched(x){
                 }, 20 / gamespeed);
         } 
         
+}
+//airPunched
+pSV=0;
+function airPunched(x){
+    punchedSpeed = 1;
+    x.fightStyle = 120;
+    x.fightStyleLenght = 10;
+    x.animSpeed = 0.5;
+    x.smashPoint = 20;
+    swing7.play();
+    x.vraimentgarde = false;
+    x.recuperation = 0;
+    x.firstGround = false;
+    x.keyCounterM = 0;
+    if (apSV == 0){
+        apSV++;
+        setTimeout(function(){
+            punchedSpeed = 1;
+            apSV = 0;
+            }, 20 / gamespeed);
+    } 
 }
 //groggy
 function groggy(x){
