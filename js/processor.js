@@ -32,11 +32,11 @@ function detectorLeft(char, pos, posb){
 function moveProcessor(char, pos, posb, pad){
 
     //saut possible
-    if (pad.up && char.jumpState == false 
+    if (pad.up && pos.jumping == false 
         && char.keyCounter == 0
         && !comboDisplay) {
         pos.pY_velocity -= 14 * gamespeed * punchedSpeed;
-        char.jumpState = true;
+        pos.jumping = true;
         char.keyCounter++;
     }
     //direction gauche
@@ -71,7 +71,7 @@ function moveProcessor(char, pos, posb, pad){
 
     //tombe au sol
     if (pos.pY > 140 - 32) {
-    char.jumpState = false;
+    pos.jumping = false;
     pos.pY = 140 - 32;
     pos.pY_velocity = 0;
     }
@@ -169,7 +169,7 @@ function contreProcessorLeft(pad, char, charb, posb){
 
 ///////////////////////////////////////////
 //SMASH & KO
-function playerCondition(char ,charb){
+function playerCondition(char ,charb, pos){
     // Moment du coup
     if (char.step >= char.smashPoint){char.smashOk = true;}
     // Iteration du air Kick
@@ -208,7 +208,7 @@ function playerCondition(char ,charb){
 ///////////////////////////////////////////
 //AUTRES CONDITIONS
     // Anim saut et frappé en l'air
-    else if (char.jumpState == true){
+    else if (pos.jumping == true && char.jumpState == true){
         if(!char.vape){
             jump(char);
             if (char.step >= 7){
@@ -379,7 +379,7 @@ function jaugePlus(char, charb){
 //PUNCH ON THE RIGHT
 ///////////////////////////////////////////
 //coups donnés à droite
-function punchRightProcessor(char, charb, posb){
+function punchRightProcessor(char, charb, pos, posb){
     if(char.smashOk == true
     && char.detectR == true){
         //nouvelle fonction garde
@@ -392,7 +392,7 @@ function punchRightProcessor(char, charb, posb){
         if(charb.vraimentgarde == false && char.energy > 0){
             punched(charb);
             flashRight(char, posb);
-            if(char.jumpState && comboDisplay == 1){
+            if(pos.jumping && comboDisplay == 1){
                 posb.pY_velocity -= 2 * gamespeed;
                 posb.pX_velocity += 4 * gamespeed;}
             if(!comboDisplay){
@@ -416,7 +416,7 @@ function punchRightProcessor(char, charb, posb){
 ///////////////////////////////////////////
 //PUNCH ON THE LEFT
 ///////////////////////////////////////////
-function punchLeftProcessor(char, charb, posb){
+function punchLeftProcessor(char, charb, pos, posb){
     //coups donnés à gauche
     if(char.smashOk == true
     && char.detectL == true){
@@ -429,7 +429,7 @@ function punchLeftProcessor(char, charb, posb){
         if(charb.vraimentgarde == false && char.energy > 0){
             punched(charb);
             flashLeft(char, posb);
-            if(char.jumpState && comboDisplay == 1){
+            if(pos.jumping && comboDisplay == 1){
                 posb.pY_velocity -= 2 * gamespeed;
                 posb.pX_velocity -= 4 * gamespeed;}
             if(!comboDisplay){
