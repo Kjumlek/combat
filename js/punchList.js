@@ -523,7 +523,7 @@ function airPunchState(x){
 //frappé
 pSV=0;
 function punched(x){
-    punchedSpeed = 1;
+    //punchedSpeed = 0.4;
     x.fightStyle = 106;
     x.fightStyleLenght = 5;
     x.animSpeed = 0.5;
@@ -533,19 +533,19 @@ function punched(x){
     x.recuperation = 0;
     x.firstGround = false;
     x.keyCounterM = 0;
-        if (pSV == 0){
+    /*    if (pSV == 0){
             pSV++;
             setTimeout(function(){
                 punchedSpeed = 1;
                 pSV = 0;
                 }, 20 / gamespeed);
-        } 
+        }*/
         
 }
 //airPunched
-pSV=0;
+apSV=0;
 function airPunched(x){
-    punchedSpeed = 1;
+    //punchedSpeed = 0.4;
     x.fightStyle = 120;
     x.fightStyleLenght = 10;
     x.animSpeed = 0.5;
@@ -555,13 +555,13 @@ function airPunched(x){
     x.recuperation = 0;
     x.firstGround = false;
     x.keyCounterM = 0;
-    if (apSV == 0){
+    /*if (apSV == 0){
         apSV++;
         setTimeout(function(){
             punchedSpeed = 1;
             apSV = 0;
             }, 20 / gamespeed);
-    } 
+    }*/
 }
 //groggy
 function groggy(x){
