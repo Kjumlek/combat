@@ -207,7 +207,12 @@ function playerCondition(char ,charb, pos){
         if (char.step >= char.fightStyleLenght){
             char.step = char.fightStyleLenght;}
     }
-    else if (char.keyCounterM == 1 && !char.jumpState && !char.arrGarde){
+    else if (char.keyCounterM == 1 
+        && !char.jumpState 
+        && !char.arrGarde
+        && char.kickRepeat
+        && char.keyCounterP == 0
+        ){
         if (char.step >= char.fightStyleLenght){
             char.step -= char.fightStyleLenght;}
         }
