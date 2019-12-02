@@ -1,0 +1,10 @@
+/////////////////////////////////////////////////
+//KO
+/////////////////////////////////////////////////
+function koProcessor(pad){
+    if(kocount != 0){
+        pad.left = false;
+        pad.up = false;
+        pad.right = false;
+    }
+}

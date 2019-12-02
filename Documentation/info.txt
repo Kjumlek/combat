@@ -1,4 +1,4 @@
-//FRANCE COMBAT v0.6.62//
+//SUPER MANDALE v0.2.44//
 2019 Double Bud Games
 
 
@@ -182,30 +182,79 @@ v0.6.62
 	-ok move!
 	-punchedSpeed suppression
 
+15/Nov/2019
+v0.0.1
+	-Change Name
+	-Processor Folders
+
+20/Nov/2019 (ForEach version)
+v0.1.6
+2685 lines.
+	-Box Collider v2!!!!
+	-DownState Detector
+	-No jump in guard
+	-Combo Move
+	-HADDOKEN v1!!!!
+	-Collider v3
+	-New Kick damage
+	-Fly & Hit fixed
+
+21/Nov/2019 (beta v2)
+v0.2.0
+	-Haddoken v1.1 (guard, 1 function)
+	-Bug on load fixed
+	-Add Players functions pages
+
+22/Nov/2019
+v0.2.2
+	-Haddoken v1.2 (one ball trigger)
+	-Ko stop regeneration
+	-3D floor function (stanBy)
+	-Hit & backward fixed
+25/Nov/2019
+v0.2.44
+	-Menu blank page.
+	-Box Collider v5!!! (frame per frame Colliders)
+
+02/Dec/2019
+v0.3.1
+	-Debug Moves
+
 ######################
 FUTURES UPDATES
 ######################
 
 //AMELIORATIONS
-#punchedSpeed
-#jauges rounds
-#sons player 1/2 win
-#haddoken!!!!
-#zoom?
-#pied et poing fury pour d’autres characters
+#jumpStep
+#conditions
 ////////////////////
 
 //INTEGRATION
-#Ajout SuperCombo
-#menu start
-#menu select & play
-#menu options et modes du jeu
-#creer controleur des volumes
-#menu options manettes
-#menu detect gamepads auto
-#fonction return menu
-////////////////////
+—— Mode & Graphics:
+	-Ajout SuperCombo
 
-//OTHER
-#bot V3 (detection y + sequences et reactions + prob combo)
+—— Pages:
+	-menu start
+	-menu select & play
+	-menu options et modes du jeu
+	-menu options manettes
+	-fonction return menu
+
+	-créer contrôleur des volumes
+	-menu detect gamepads auto
+
+
+—— Sounds:
+	-sons player 1/2 win
+
+—— Graphic motor:
+	-zoom?
+
+—— Future Character:
+	-pied et poing fury pour d’autres characters
+
+—— Bot:
+	-Sequences et reactions 
+	-Combo solution
+
 ////////////////////

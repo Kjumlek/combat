@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html>
 <head>
-    <title>France Combat</title>
+    <title>Super Mandale</title>
     <meta charset="utf-8">
 
 </head>
@@ -9,38 +9,40 @@
     <div style="padding:50px 10px 20px 10px">
         <canvas id="canvas" width="350" height="150" style="border: 4px ridge rgb(59, 59, 59)"></canvas>
     </div>
-    <div style="scrollbar-color: rgb(19, 19, 19) #1d1d1d; width: 700px; height: 80px; overflow: scroll; margin: 0px 10px; font-family: 'Montserrat', sans-serif; color: rgb(65, 64, 64); font-size: 12px; text-align: center;">
-        Start: (O), Music (P)<br>
-        PLAYER A:&emsp; Directions&emsp;(Down&emsp; Up&emsp; Left&emsp; Right)&emsp;&emsp; Punch(L)&emsp; Kick(M)<br>
-        PLAYER B:&emsp; Directions&emsp;(S&emsp;&emsp; Z&emsp;&emsp; Q&emsp;&emsp; D)&emsp;&emsp;&emsp; Punch(1)&emsp; Kick(2)<br>
-        <br>
-        Punch (P), Kick (K), Double punch (P,P)<br>
-        Low Kick (down K), Air Kick (Up Kick)<br><br>
-        Guard (backward), DownGuard (Down)<br><br>
-        Double Air Kick (K after Air Kick)<br>
-        Uppercut (after double punch or Kick) (forward, P)<br>
-        Cisor Kick (after double punch or kick (forward, K)<br>
-        China & Maboo Punch (forward after guard)<br><br>
-        (works on FireFox or Chrome)<br>
-        Audio & Image Design: Jean-Sebastien Vermalle<br>
-        Development: Jean-Philippe Mary<br>
-        2019-Double Bud Game
 
-    </div>
-    <script src="js/initScreen.js"></script>
+    <script src="js/start/configScreen.js"></script>
+    <script src="js/start/init.js"></script>
+    <script src="js/start/tvDisplay.js"></script>
 
-    <script src="js/script.js"></script>
-
-    <script src="js/characterA.js"></script>
-    <script src="js/characterB.js"></script>
-
-    <script src="js/punchList.js"></script>
+    <script src="js/characters/elvisKasushi.js"></script>
     
-    <script src="js/processor.js"></script>
-
-    <script src="js/autobot.js"></script>
     
-    <script src="js/ressources.js"></script>
+    <script src="js/processors/positions/playerDirection.js"></script>
+    <script src="js/processors/positions/boxCollider.js"></script>
+    <script src="js/processors/positions/moves.js"></script>
+    
+    <script src="js/processors/modes/conditions.js"></script>
+    <script src="js/processors/modes/contre.js"></script>
+    <script src="js/processors/modes/koMode.js"></script>
+
+    <script src="js/processors/energy/energy.js"></script>
+   
+    <script src="js/processors/combo/comboSystem.js"></script>
+    <script src="js/processors/combo/comboJauge.js"></script>
+    <script src="js/processors/combo/flashHit.js"></script>
+
+    <script src="js/processors/fireball/fireball.js"></script>
+
+    <script src="js/players/playerA.js"></script>
+    <script src="js/players/playerB.js"></script>
+    <script src="js/players/playerAFunctions.js"></script>
+    <script src="js/players/playerBFunctions.js"></script>
+    <script src="js/players/autoplayer.js"></script>
+
+    
+    
+    
+    <script src="js/ressources/ressources.js"></script>
 
 </body>
 </html>
