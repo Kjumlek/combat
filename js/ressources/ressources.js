@@ -10,9 +10,17 @@ startFightScreen.src ="ressources/images/rounds/round.png";
 var consoleMenu = new Image();
 consoleMenu.src ="ressources/images/ui/console.png";
 
+//pause
+var pauseScreen = new Image();
+pauseScreen.src ="ressources/images/menu/pauseScreen.png";
+
 //rules
 var rules = new Image();
 rules.src ="ressources/images/ui/rules.png";
+
+//rules
+var timeOutImg = new Image();
+timeOutImg.src ="ressources/images/ui/timeOut.png";
 
 //timer
 var timeNumber = new Image();

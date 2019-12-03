@@ -39,16 +39,19 @@ function animate(){
         trozik.play();
         trozik.currentTime = 11.996;
     }
+    if (!pauseEffect){
     if(!okFight){
         timeOne = 61;
     }
     if(okFight){
         if(timeOne >= 2){
+            
             timeOne-= 1/240;
             timeNumberStep1 =  (timeOne-1) % 10;
             timeNumberStep2 =  (Math.floor((timeOne-1)/10) % 10);
         }
         if(timeOne <= 2){
+            timeOutScreen = true;
             okFight = false;
             startcount = 0;
             comboFail.play()
@@ -66,8 +69,10 @@ function animate(){
     modeCombo();
     stand();
     botstand();
-    
+    }
     requestAnimationFrame(animate);
+    
+    console.log(pauseEffect)
 }
 var stepAnim;
 var botstepAnim;
@@ -200,6 +205,10 @@ function drawShell(r,
     //startscreen
     if(displayFight){
         ctx.drawImage(startFightScreen, 150*displayFightStep, 0, 150, 150, displayFightPos.pX*s, displayFightPos.pY*s, 150*s, 150*s);
+    }
+
+    if(timeOutScreen){
+        ctx.drawImage(timeOutImg, 228, 150, 63*s, 11*s);
     }
     //boxes collider
     //ctx.drawImage(bodyBoxImg, bodyBoxA.pX*s, bodyBoxA.pY*s, bodyBoxA.width*s, bodyBoxA.height*s);

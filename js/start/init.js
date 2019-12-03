@@ -25,6 +25,11 @@ var bgStep = 0;
 ///////////////////////////////////////////
 var roundBL = {height:5, width:7, pX:2, pY:28};
 var roundBR = {height:5, width:7, pX:281, pY:28};
+///////////////////////////////////////////
+//pause
+var pauseEffect = false;
+var timeOutScreen = false;
+
 
 ///////////////////////////////////////////
 //MUSIQUE
@@ -47,13 +52,22 @@ var displayStartCount = 0;
 var displayCounter = 0;
 
 document.addEventListener("keydown",function(event){
-    if (event.keyCode == 13) {
+    if (event.keyCode == 13 && menu0) {
         menu0 = false;}
+    else if (event.keyCode == 13 && !menu0 && !pauseEffect) {
+        ctx.drawImage(pauseScreen,0, 0, 580, 300);
+        pauseEffect = true;
+        trozik.volume = 0.15;}
+    else if (event.keyCode == 13 && pauseEffect) {
+        pauseEffect = false;
+        trozik.volume = 0.5;
+    }
 
     //display
     fighter.roundWin = 0;
     bot.roundWin = 0;
     if (event.keyCode == 79 && startcount == 0 && !menu0){
+        timeOutScreen = false;
         //joue la musique
         autoplay();
         moveBg = -50;

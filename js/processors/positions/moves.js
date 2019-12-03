@@ -2,6 +2,7 @@
 //DEPLACEMENTS
 /////////////////////////////////////////////////
 function moveProcessor(char, charb, pos, posb, pad){
+    if(!pauseEffect){
     if (pad.left || pad.right){
         if(char.keyCounterM == 0 
             && char.iterationHit
@@ -70,15 +71,7 @@ function moveProcessor(char, charb, pos, posb, pad){
     pos.pY = 140 - 32;
     pos.pY_velocity = 0;
     }
-    //testeur pour jump (pas la meme reaction pour les deux joueurs)
-    /*if (pSV == 0 && pos.pY < 100){
-        punchedSpeed = 0.1;
-        pSV++;
-        setTimeout(function(){
-            punchedSpeed = 1;
-            pSV = 0;
-            }, 30 / gamespeed);
-    }*/
+    //bouge le fond
     if (pad.right && pos.pX >= 318-pos.width){
         if (moveBg > -105){
             moveBg--;
@@ -116,5 +109,5 @@ function moveProcessor(char, charb, pos, posb, pad){
     && char.reverseAnim == -1) {
         pos.pX = posb.pX+24;}
 
-    
+    }
 }
